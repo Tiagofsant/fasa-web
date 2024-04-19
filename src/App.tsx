@@ -1,11 +1,15 @@
-import { Stack, Typography } from "@mui/material";
+import { HelmetProvider } from "react-helmet-async";
+import { BrowserRouter } from "react-router-dom";
 import "./App.css";
+import Router from "./routes";
 
 function App() {
   return (
-    <Stack>
-      <Typography variant="h1">Olá, mundo!</Typography>
-    </Stack>
+    <HelmetProvider>
+      <BrowserRouter>
+        <Router />
+      </BrowserRouter>
+    </HelmetProvider>
   );
 }
 
